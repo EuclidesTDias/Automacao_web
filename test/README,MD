@@ -1,0 +1,56 @@
+## Software e Configuração:
+'''sh
+$ Python 3.11.1 e pip ou supreior
+$ Pip
+'''
+## INSTALAÇÃO E EXECUÇÃO
+## Preparando ambiente
+'''sh
+$ py -m venv .env
+$ .env\Scripts\activate
+$ pip install -r requirements\requirements.txt
+'''
+## Criação de variáveis de ambientes
+
+### Criação das variáveis de ambiente necessáris para aplicação:
+'''sh
+set LOGIN_USER=username
+set PASSW_USER=passworld
+'''
+
+## Comandos para execução dos testes:
+# Options
+### Executar todos os cenarios:
+'''sh
+$ make test
+'''
+### Executar todos os cenários:
+'''sh
+$ behave -f html -o=reports/results.html -f json -o=reports/results.json -k
+'''
+### Alure Report
+'''sh
+$ behave -s allure -o=results
+'''
+### Utilizando Debug ipdb
+'''sh
+$ pip install ipdb
+- ipdb é o debugguer do python pois o Behave breescreve ele
+'''
+'''sh
+$ import ipdb; ipdb.sset_trace() - este comando da start o debug
+'''
+### Gerar Report Allure
+'''sh
+$ make test_allure
+'''
+### Abrindo relatorio
+'''sh
+$ allure serve "C:\Projetos_Automacao\Architech\Prospera\test\reports"
+'''
+### Entendendo fluxo do Código
+'''
+$ 01 - Ler o Bdd(".feature") de acordo como a Execução.
+$ 02 - ler o Steps
+$ 03 - Executar as ações de pages
+'''
